@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dunes 2K - Desert Basketball</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="game-container">
+        <div id="loading-screen">
+            <div class="loader"></div>
+            <h2>Loading Dunes 2K...</h2>
+        </div>
+        
+        <div id="menu-overlay" class="menu-active">
+            <div class="menu-box">
+                <h1>DUNES 2K</h1>
+                <h2>Desert Basketball Association</h2>
+                <div class="menu-buttons">
+                    <button onclick="game.startQuickGame()">Quick Game</button>
+                    <button onclick="game.showCareerMode()">Career Mode</button>
+                    <button onclick="game.showTeams()">Teams</button>
+                    <button onclick="game.showSettings()">Settings</button>
+                </div>
+            </div>
+        </div>
+        
+        <div id="hud" style="display: none;">
+            <div class="scoreboard">
+                <div class="team home">
+                    <span id="home-team">HOME</span>
+                    <span id="home-score">0</span>
+                </div>
+                <div class="timer">12:00</div>
+                <div class="team away">
+                    <span id="away-score">0</span>
+                    <span id="away-team">AWAY</span>
+                </div>
+            </div>
+            <div class="controls-hint">
+                WASD: Move | SPACE: Shoot | P: Pass | SHIFT: Sprint
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    <script src="js/utils/textures.js"></script>
+    <script src="js/game/Court.js"></script>
+    <script src="js/game/Player.js"></script>
+    <script src="js/game/Ball.js"></script>
+    <script src="js/game/Controls.js"></script>
+    <script src="js/game/Crowd.js"></script>
+    <script src="js/game/Physics.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
